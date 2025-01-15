@@ -1,0 +1,138 @@
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+["✓ Service video initialized successfully"]
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+Initializing AwsS3Service
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+["✓ Service aws_s3 initialized successfully"]
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+["◎ Initializing ImageDescriptionService"]
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+["ℹ Initializing LlamaService..."]
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+CUDA not detected. Transcription will run on CPU.
+2025-01-11 11:38:16.01
+6c7a4b10
+User
+Initializing AwsS3Service
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+["✓ Registering action: JOIN_VOICE"]
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+["✓ Registering action: LEAVE_VOICE"]
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+["✓ Registering action: SUMMARIZE_CONVERSATION"]
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+["✓ Registering action: CHAT_WITH_ATTACHMENTS"]
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+["✓ Registering action: TRANSCRIBE_MEDIA"]
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+["✓ Registering action: DOWNLOAD_MEDIA"]
+2025-01-11 11:38:16.14
+6c7a4b10
+User
+2025-01-11 11:38:16.19
+6c7a4b10
+User
+["◎ Chat started. Type 'exit' to quit."]
+2025-01-11 11:38:16.19
+6c7a4b10
+User
+2025-01-11 11:38:16.19
+6c7a4b10
+User
+⛔ ERRORS
+2025-01-11 11:38:16.19
+6c7a4b10
+User
+Unhandled error in startAgents:
+2025-01-11 11:38:16.19
+6c7a4b10
+User
+{"code":"ERR_USE_AFTER_CLOSE"}
+2025-01-11 11:38:16.27
+6c7a4b10
+User
+ ELIFECYCLE  Command failed with exit code 1.
+2025-01-11 11:38:16.52
+6c7a4b10
+User
+ ELIFECYCLE  Command failed with exit code 1.
+2025-01-11 11:38:16.57
+6c7a4b10
+System
+command finished with error [sh -c pnpm start -- --characters=characters/proxy_aidvisor.character.json]: exit status 1
+2025-01-11 11:38:18.12
+6c7a4b10
+User
+> nodejs@1.0.0 start /home/runner/workspace
+2025-01-11 11:38:18.12
+6c7a4b10
+User
+> cd eliza-starter && pnpm start -- --characters=characters/proxy_aidvisor.character.json "--" "--characters=characters/proxy_aidvisor.character.json"
+2025-01-11 11:38:18.90
+6c7a4b10
+User
+> @ai16z/agent@0.1.1 start /home/runner/workspace/eliza-starter
+2025-01-11 11:38:18.90
+6c7a4b10
+User
+> tsc && node --loader ts-node/esm src/index.ts "--" "--characters=characters/proxy_aidvisor.character.json" "--" "--characters=characters/proxy_aidvisor.character.json"
+2025-01-11 11:38:26.50
+6c7a4b10
+User
+(node:197) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+2025-01-11 11:38:26.50
+6c7a4b10
+User
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+2025-01-11 11:38:26.50
+6c7a4b10
+User
+(Use `node --trace-warnings ...` 

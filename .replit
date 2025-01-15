@@ -1,0 +1,21 @@
+entrypoint = "index.js"
+modules = ["nodejs-23", "python-base-3.13"]
+hidden = [".config", "package-lock.json"]
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", "package.json", "package-lock.json"]
+
+[nix]
+channel = "stable-24_05"
+
+[unitTest]
+language = "nodejs"
+
+[deployment]
+run = "cd eliza-starter && pnpm start --characters=characters/proxy_aidvisor.character.json"
+deploymentTarget = "gce"
+ignorePorts = true
+
+[[ports]]
+localPort = 3000
+externalPort = 80

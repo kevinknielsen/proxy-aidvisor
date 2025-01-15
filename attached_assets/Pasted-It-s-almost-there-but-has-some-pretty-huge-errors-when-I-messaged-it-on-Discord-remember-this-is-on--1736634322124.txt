@@ -1,0 +1,155 @@
+It's almost there but has some pretty huge errors when I messaged it on Discord remember this is on the replit deployment not local
+
+025-01-11 17:24:17.87
+8e435591
+User
+⛔ ERRORS
+2025-01-11 17:24:17.87
+8e435591
+User
+API Response:
+2025-01-11 17:24:17.87
+8e435591
+User
+{
+2025-01-11 17:24:17.87
+8e435591
+User
+"error": {
+2025-01-11 17:24:17.87
+8e435591
+User
+"message": "Incorrect API key provided: $OPENAI_***_KEY. You can find your API key at https://platform.openai.com/account/api-keys.",
+2025-01-11 17:24:17.87
+8e435591
+User
+"type": "invalid_request_error",
+2025-01-11 17:24:17.87
+8e435591
+User
+"param": null,
+2025-01-11 17:24:17.87
+8e435591
+User
+"code": "invalid_api_key"
+2025-01-11 17:24:17.87
+8e435591
+User
+}
+2025-01-11 17:24:17.87
+8e435591
+User
+}
+2025-01-11 17:24:17.87
+8e435591
+User
+2025-01-11 17:24:17.87
+8e435591
+User
+2025-01-11 17:24:17.87
+8e435591
+User
+⛔ ERRORS
+2025-01-11 17:24:17.87
+8e435591
+User
+Full error details:
+2025-01-11 17:24:17.87
+8e435591
+User
+{}
+2025-01-11 17:24:17.87
+8e435591
+User
+2025-01-11 17:24:17.87
+8e435591
+User
+⛔ ERRORS
+2025-01-11 17:24:17.87
+8e435591
+User
+Failed to generate embedding:
+2025-01-11 17:24:17.87
+8e435591
+User
+{}
+2025-01-11 17:24:17.87
+8e435591
+User
+◎ LOGS
+2025-01-11 17:24:17.87
+8e435591
+User
+Creating Memory
+2025-01-11 17:24:17.87
+8e435591
+User
+1b2d4308-f136-08d0-a838-346b3e5ecc34
+2025-01-11 17:24:17.87
+8e435591
+User
+Hey <@1321419599752859691>
+2025-01-11 17:24:18.03
+8e435591
+User
+Error handling message: SqliteError: Vector dimension mistmatch. First vector has 384 dimensions, while the second has 1536 dimensions.
+2025-01-11 17:24:18.03
+8e435591
+User
+at SqliteDatabaseAdapter.searchMemoriesByEmbedding (file:///home/runner/workspace/eliza-starter/node_modules/.pnpm/@elizaos+adapter-sqlite@0.1.7_@google-cloud+vertexai@1.9.2_@langchain+core@0.3.28_openai@4.73_47qqcykzpfmy5k5wxeiibjmkdm/node_modules/@elizaos/adapter-sqlite/dist/index.js:332:43)
+2025-01-11 17:24:18.03
+8e435591
+User
+at SqliteDatabaseAdapter.createMemory (file:///home/runner/workspace/eliza-starter/node_modules/.pnpm/@elizaos+adapter-sqlite@0.1.7_@google-cloud+vertexai@1.9.2_@langchain+core@0.3.28_openai@4.73_47qqcykzpfmy5k5wxeiibjmkdm/node_modules/@elizaos/adapter-sqlite/dist/index.js:252:42)
+2025-01-11 17:24:18.03
+8e435591
+User
+at MemoryManager.createMemory (file:///home/runner/workspace/eliza-starter/node_modules/.pnpm/@elizaos+core@0.1.7_@google-cloud+vertexai@1.9.2_@langchain+core@0.3.28_openai@4.73.0_zod@3.2_hokvgbsvx7cfc5uvgr2imyqr6u/node_modules/@elizaos/core/dist/index.js:31248:40)
+2025-01-11 17:24:18.03
+8e435591
+User
+at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-01-11 17:24:18.03
+8e435591
+User
+at async MessageManager.handleMessage (file:///home/runner/workspace/eliza-starter/node_modules/.pnpm/@elizaos+client-discord@0.1.7_@google-cloud+vertexai@1.9.2_@langchain+core@0.3.28_openai@4.73_lv3uscktyodq65mv7tck27xemq/node_modules/@elizaos/client-discord/dist/index.js:2228:9) {
+2025-01-11 17:24:18.03
+8e435591
+User
+code: 'SQLITE_ERROR'
+2025-01-11 17:24:18.03
+8e435591
+User
+}
+2025-01-11 17:24:18.10
+8e435591
+User
+Error sending message: SqliteError: Vector dimension mistmatch. First vector has 384 dimensions, while the second has 1536 dimensions.
+2025-01-11 17:24:18.10
+8e435591
+User
+at SqliteDatabaseAdapter.searchMemoriesByEmbedding (file:///home/runner/workspace/eliza-starter/node_modules/.pnpm/@elizaos+adapter-sqlite@0.1.7_@google-cloud+vertexai@1.9.2_@langchain+core@0.3.28_openai@4.73_47qqcykzpfmy5k5wxeiibjmkdm/node_modules/@elizaos/adapter-sqlite/dist/index.js:332:43)
+2025-01-11 17:24:18.10
+8e435591
+User
+at SqliteDatabaseAdapter.createMemory (file:///home/runner/workspace/eliza-starter/node_modules/.pnpm/@elizaos+adapter-sqlite@0.1.7_@google-cloud+vertexai@1.9.2_@langchain+core@0.3.28_openai@4.73_47qqcykzpfmy5k5wxeiibjmkdm/node_modules/@elizaos/adapter-sqlite/dist/index.js:252:42)
+2025-01-11 17:24:18.10
+8e435591
+User
+at MemoryManager.createMemory (file:///home/runner/workspace/eliza-starter/node_modules/.pnpm/@elizaos+core@0.1.7_@google-cloud+vertexai@1.9.2_@langchain+core@0.3.28_openai@4.73.0_zod@3.2_hokvgbsvx7cfc5uvgr2imyqr6u/node_modules/@elizaos/core/dist/index.js:31248:40)
+2025-01-11 17:24:18.10
+8e435591
+User
+at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-01-11 17:24:18.10
+8e435591
+User
+at async MessageManager.handleMessage (file:///home/runner/workspace/eliza-starter/node_modules/.pnpm/@elizaos+client-discord@0.1.7_@google-cloud+vertexai@1.9.2_@langchain+core@0.3.28_openai@4.73_lv3uscktyodq65mv7tck27xemq/node_modules/@elizaos/client-discord/dist/index.js:2228:9) {
+2025-01-11 17:24:18.10
+8e435591
+User
+code: 'SQLITE_ERROR'
+2025-01-11 17:24:18.10
+8e435591
+User
+}

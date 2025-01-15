@@ -1,0 +1,135 @@
+2025-01-11 16:19:39.50
+9056e12e
+User
+["✓ Service image_description initialized successfully"]
+2025-01-11 16:19:39.50
+9056e12e
+User
+2025-01-11 16:19:39.50
+9056e12e
+User
+["ℹ Initializing LlamaService..."]
+2025-01-11 16:19:39.50
+9056e12e
+User
+2025-01-11 16:19:39.50
+9056e12e
+User
+["✓ Service text_generation initialized successfully"]
+2025-01-11 16:19:39.50
+9056e12e
+User
+2025-01-11 16:19:39.50
+9056e12e
+User
+["✓ Service pdf initialized successfully"]
+2025-01-11 16:19:39.50
+9056e12e
+User
+["✓ Service speech_generation initialized successfully"]
+2025-01-11 16:19:39.50
+9056e12e
+User
+CUDA not detected. Transcription will run on CPU.
+2025-01-11 16:19:39.50
+9056e12e
+User
+["✓ Service transcription initialized successfully"]
+2025-01-11 16:19:39.50
+9056e12e
+User
+2025-01-11 16:19:39.50
+9056e12e
+User
+["✓ Service video initialized successfully"]
+2025-01-11 16:19:39.50
+9056e12e
+User
+2025-01-11 16:19:39.50
+9056e12e
+User
+Initializing AwsS3Service
+2025-01-11 16:19:39.50
+9056e12e
+User
+["✓ Service aws_s3 initialized successfully"]
+2025-01-11 16:19:39.50
+9056e12e
+User
+["◎ Initializing ImageDescriptionService"]
+2025-01-11 16:19:39.50
+9056e12e
+User
+["ℹ Initializing LlamaService..."]
+2025-01-11 16:19:39.50
+9056e12e
+User
+2025-01-11 16:19:39.50
+9056e12e
+User
+CUDA not detected. Transcription will run on CPU.
+2025-01-11 16:19:39.50
+9056e12e
+User
+Initializing AwsS3Service
+2025-01-11 16:19:39.77
+9056e12e
+User
+["✓ Registering action: JOIN_VOICE"]
+2025-01-11 16:19:39.77
+9056e12e
+User
+["✓ Registering action: LEAVE_VOICE"]
+2025-01-11 16:19:39.77
+9056e12e
+User
+["✓ Registering action: SUMMARIZE_CONVERSATION"]
+2025-01-11 16:19:39.77
+9056e12e
+User
+["✓ Registering action: CHAT_WITH_ATTACHMENTS"]
+2025-01-11 16:19:39.77
+9056e12e
+User
+2025-01-11 16:19:39.77
+9056e12e
+User
+["✓ Registering action: TRANSCRIBE_MEDIA"]
+2025-01-11 16:19:39.77
+9056e12e
+User
+2025-01-11 16:19:39.77
+9056e12e
+User
+["✓ Registering action: DOWNLOAD_MEDIA"]
+2025-01-11 16:19:40.00
+9056e12e
+User
+["◎ Chat started. Type 'exit' to quit."]
+2025-01-11 16:19:40.00
+9056e12e
+User
+⛔ ERRORS
+2025-01-11 16:19:40.00
+9056e12e
+User
+Unhandled error in startAgents:
+2025-01-11 16:19:40.00
+9056e12e
+User
+{"code":"ERR_USE_AFTER_CLOSE"}
+2025-01-11 16:19:40.26
+9056e12e
+User
+ ELIFECYCLE  Command failed with exit code 1.
+2025-01-11 16:19:40.50
+9056e12e
+User
+ ELIFECYCLE  Command failed with exit code 1.
+2025-01-11 16:19:40.54
+9056e12e
+System
+command finished with error [sh -c pnpm start -- --characters=characters/proxy_aidvisor.character.json]: exit status 1
+2025-01-11 16:19:43.52
+9056e12e
+User

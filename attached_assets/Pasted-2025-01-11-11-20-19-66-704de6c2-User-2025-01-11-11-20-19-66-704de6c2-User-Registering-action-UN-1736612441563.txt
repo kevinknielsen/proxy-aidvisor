@@ -1,0 +1,150 @@
+2025-01-11 11:20:19.66
+704de6c2
+User
+2025-01-11 11:20:19.66
+704de6c2
+User
+["✓ Registering action: UNFOLLOW_ROOM"]
+2025-01-11 11:20:19.66
+704de6c2
+User
+2025-01-11 11:20:19.66
+704de6c2
+User
+2025-01-11 11:20:19.66
+704de6c2
+User
+["✓ Registering action: UNMUTE_ROOM"]
+2025-01-11 11:20:19.66
+704de6c2
+User
+["✓ Registering action: DESCRIBE_IMAGE"]
+2025-01-11 11:20:19.66
+704de6c2
+User
+◎ LOGS
+2025-01-11 11:20:19.66
+704de6c2
+User
+browser
+2025-01-11 11:20:19.66
+704de6c2
+User
+image_description
+2025-01-11 11:20:19.66
+704de6c2
+User
+2025-01-11 11:20:19.66
+704de6c2
+User
+["✓ Service image_description registered successfully"]
+2025-01-11 11:20:19.66
+704de6c2
+User
+◎ LOGS
+2025-01-11 11:20:19.67
+704de6c2
+User
+Registering service:
+2025-01-11 11:20:19.67
+704de6c2
+User
+2025-01-11 11:20:19.67
+704de6c2
+User
+["✓ Service image_description initialized successfully"]
+2025-01-11 11:20:19.67
+704de6c2
+User
+["ℹ Initializing LlamaService..."]
+2025-01-11 11:20:19.67
+704de6c2
+User
+["✓ Service text_generation initialized successfully"]
+2025-01-11 11:20:19.67
+704de6c2
+User
+2025-01-11 11:20:19.67
+704de6c2
+User
+["✓ Service pdf initialized successfully"]
+2025-01-11 11:20:19.67
+704de6c2
+User
+["✓ Service speech_generation initialized successfully"]
+2025-01-11 11:20:19.67
+704de6c2
+User
+CUDA not detected. Transcription will run on CPU.
+2025-01-11 11:20:19.67
+704de6c2
+User
+2025-01-11 11:20:19.67
+704de6c2
+User
+["✓ Service aws_s3 initialized successfully"]
+2025-01-11 11:20:19.67
+704de6c2
+User
+2025-01-11 11:20:19.67
+704de6c2
+User
+["◎ Initializing ImageDescriptionService"]
+2025-01-11 11:20:19.67
+704de6c2
+User
+2025-01-11 11:20:19.67
+704de6c2
+User
+["ℹ Initializing LlamaService..."]
+2025-01-11 11:20:19.76
+704de6c2
+User
+2025-01-11 11:20:19.76
+704de6c2
+User
+["✓ Registering action: DOWNLOAD_MEDIA"]
+2025-01-11 11:20:19.83
+704de6c2
+User
+["◎ Chat started. Type 'exit' to quit."]
+2025-01-11 11:20:19.83
+704de6c2
+User
+Unhandled error in startAgents:
+2025-01-11 11:20:20.21
+704de6c2
+System
+command finished with error [sh -c pnpm start -- --characters=characters/proxy_aidvisor.character.json]: exit status 1
+2025-01-11 11:20:21.76
+704de6c2
+User
+> nodejs@1.0.0 start /home/runner/workspace
+2025-01-11 11:20:22.48
+704de6c2
+User
+> tsc && node --loader ts-node/esm src/index.ts "--" "--characters=characters/proxy_aidvisor.character.json" "--" "--characters=characters/proxy_aidvisor.character.json"
+2025-01-11 11:20:29.38
+704de6c2
+User
+(node:273) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+2025-01-11 11:20:29.38
+704de6c2
+User
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+2025-01-11 11:20:29.38
+704de6c2
+User
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-01-11 11:20:29.38
+704de6c2
+User
+(node:273) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+2025-01-11 11:20:29.38
+704de6c2
+User
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+Wrap
+
+Colors
