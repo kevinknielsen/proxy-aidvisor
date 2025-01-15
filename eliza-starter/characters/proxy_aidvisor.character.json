@@ -1,6 +1,6 @@
 {
     "name": "Proxy AIdvisor",
-    "clients": ["discord"],
+    "clients": ["discord", "telegram"],
     "modelProvider": "anthropic",
     "settings": {
         "voice": {
