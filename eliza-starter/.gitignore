@@ -1,11 +1,20 @@
-*.ts
-dist
-!index.ts
-!character.ts
-.env
-node_modules
+# Dependencies
+node_modules/
+
+# Build outputs
 dist/
 
+# Environment and secrets
+.env
+
+# Database
 db.sqlite
-.idea
+
+# IDE
+.idea/
+
+# ML Models
 model.gguf
+
+# TypeScript
+*.tsbuildinfo
