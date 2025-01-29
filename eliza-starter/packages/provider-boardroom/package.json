@@ -5,15 +5,20 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": ["boardroom", "eliza", "provider"],
-  "author": "Your Name",
+  "author": "Your Name", 
   "license": "MIT",
   "dependencies": {
+    "@elizaos/core": "^0.1.7",
     "axios": "^1.4.0"
   },
   "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
     "tsup": "^6.0.0"
   }
 }
