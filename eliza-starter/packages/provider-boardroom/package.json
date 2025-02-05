@@ -1,0 +1,29 @@
+{
+  "name": "@eliza/provider-boardroom",
+  "version": "1.0.0",
+  "description": "Boardroom API integration for Eliza Starter project",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": ["boardroom", "eliza", "provider"],
+  "author": "Your Name", 
+  "license": "MIT",
+  "dependencies": {
+    "@elizaos/core": "^0.1.7",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsup": "^6.0.0",
+    "@types/jest": "^29.5.3",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1"
+  }
+}
