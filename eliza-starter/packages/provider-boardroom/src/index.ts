@@ -34,7 +34,8 @@ export class BoardroomProvider implements Provider {
 
         } catch (error) {
             console.error("BoardroomProvider error:", error);
-            return `Error: ${error.message}`;
+            const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+            return `Error: ${errorMessage}`;
         }
     }
 
