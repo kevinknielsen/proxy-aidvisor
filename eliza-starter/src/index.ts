@@ -154,6 +154,12 @@ const startAgents = async () => {
     process.exit(1);
   }
 
+  // Ensure data directory exists
+  const dataDir = path.join(__dirname, "../data");
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+
   try {
     for (const character of characters) {
       const db = initializeDatabase(path.join(__dirname, "../data"));
