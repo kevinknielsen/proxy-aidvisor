@@ -1,6 +1,6 @@
-entrypoint = "index.js"
-modules = ["nodejs-23", "python-base-3.13"]
+modules = ["bash", "nix", "nodejs-22", "web"]
 hidden = [".config", "package-lock.json"]
+run = "pnpm start --characters=characters/proxy_aidvisor.character.json"
 
 [gitHubImport]
 requiredFiles = [".replit", "replit.nix", "package.json", "package-lock.json"]
@@ -12,7 +12,7 @@ channel = "stable-24_05"
 language = "nodejs"
 
 [deployment]
-run = "cd eliza-starter && pnpm start --characters=characters/proxy_aidvisor.character.json"
+run = ["sh", "-c", "pnpm start --characters=characters/proxy_aidvisor.character.json"]
 deploymentTarget = "gce"
 ignorePorts = true
 
