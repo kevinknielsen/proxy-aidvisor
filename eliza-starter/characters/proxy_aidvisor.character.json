@@ -4,9 +4,9 @@
     "modelProvider": "openai",
     "settings": {
         "secrets": {
-            "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+            "OPENAI_API_KEY": "sk-${OPENAI_API_KEY}"
         },
-        "model": "gpt-4-turbo-preview",
+        "model": "gpt-4-1106-preview",
         "modelConfig": {
             "temperature": 0.7,
             "maxTokens": 1024
