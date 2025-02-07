@@ -6,13 +6,18 @@ export class BoardroomProvider implements Provider {
 
     constructor(apiKey?: string) {
         const boardroomKey = apiKey || process.env.BOARDROOM_API_KEY;
-        if (!boardroomKey) {
+        if (!boardroomKey || typeof boardroomKey !== 'string' || boardroomKey.trim() === '') {
             throw new Error(
-                "Boardroom API key is required - set BOARDROOM_API_KEY in secrets",
+                "Valid Boardroom API key is required - set BOARDROOM_API_KEY in secrets",
             );
         }
-        console.log("Initializing BoardroomClient");
-        this.client = new BoardroomClient(boardroomKey);
+        console.log("Initializing BoardroomClient with key");
+        try {
+            this.client = new BoardroomClient(boardroomKey);
+        } catch (error) {
+            console.error("Failed to initialize BoardroomClient:", error);
+            throw error;
+        }
     }
 
     async get(

@@ -6,9 +6,9 @@ export class BoardroomClient {
     private apiKey: string;
 
     constructor(apiKey: string) {
-        this.apiKey = apiKey || process.env.BOARDROOM_API_KEY;
-        if (!this.apiKey) {
-            throw new Error("Boardroom API key is required");
+        this.apiKey = apiKey;
+        if (!this.apiKey || typeof this.apiKey !== 'string' || this.apiKey.trim() === '') {
+            throw new Error("Valid Boardroom API key is required");
         }
     }
 
