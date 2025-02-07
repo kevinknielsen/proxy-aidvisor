@@ -166,7 +166,12 @@ const startAgents = async () => {
     }
     elizaLogger.log("All agents started successfully");
   } catch (error) {
-    elizaLogger.error("Error starting agents:", error);
+    elizaLogger.error("Error starting agents:", {
+      name: error?.name,
+      message: error?.message,
+      stack: error?.stack
+    });
+    console.error("Detailed error:", error);
     process.exit(1);
   }
 };
