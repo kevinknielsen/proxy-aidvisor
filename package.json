@@ -15,5 +15,8 @@
   "dependencies": {
     "@elizaos/core": "^0.1.7",
     "@types/node": "^18.0.6"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
