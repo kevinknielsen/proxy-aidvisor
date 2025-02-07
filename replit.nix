@@ -1,9 +1,9 @@
 
 { pkgs }: {
   deps = [
+    pkgs.nodejs_latest
     pkgs.git-filter-repo
     pkgs.git-lfs
-    pkgs.nodejs-18_x
     pkgs.nodePackages.pnpm
     pkgs.nodePackages.typescript
   ];
