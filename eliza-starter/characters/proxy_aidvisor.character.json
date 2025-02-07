@@ -1,12 +1,9 @@
 {
     "name": "Proxy AIdvisor",
     "clients": ["discord"],
-    "modelProvider": "openai",
+    "modelProvider": "anthropic",
     "settings": {
-        "secrets": {
-            "OPENAI_API_KEY": "sk-${OPENAI_API_KEY}"
-        },
-        "model": "gpt-4-1106-preview",
+        "model": "claude-3-sonnet-20240229",
         "modelConfig": {
             "temperature": 0.7,
             "maxTokens": 1024
