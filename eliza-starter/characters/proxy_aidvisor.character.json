@@ -1,7 +1,7 @@
 {
     "name": "Proxy AIdvisor",
     "clients": ["discord"],
-    "modelProvider": "openai",
+    "modelProvider": "anthropic",
     "settings": {
         "model": "claude-3-sonnet-20240229",
         "modelConfig": {
