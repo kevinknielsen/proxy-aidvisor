@@ -1,5 +1,5 @@
-import { Provider, IAgentRuntime, Memory, State } from '@elizaos/core';
-import { BoardroomClient } from './boardroomClient';
+import { Provider, IAgentRuntime, Memory, State } from "@elizaos/core";
+import { BoardroomClient } from "./boardroomClient";
 
 export class BoardroomProvider implements Provider {
     private client: BoardroomClient;
@@ -7,21 +7,24 @@ export class BoardroomProvider implements Provider {
     constructor(apiKey?: string) {
         const boardroomKey = apiKey || process.env.BOARDROOM_API_KEY;
         if (!boardroomKey) {
-            throw new Error('Boardroom API key is required - set BOARDROOM_API_KEY in secrets');
+            throw new Error(
+                "Boardroom API key is required - set BOARDROOM_API_KEY in secrets",
+            );
         }
-        console.log('Initializing BoardroomClient');
+        console.log("Initializing BoardroomClient");
         this.client = new BoardroomClient(boardroomKey);
     }
 
     async get(
         runtime: IAgentRuntime,
         message: Memory,
-        _state?: State
+        _state?: State,
     ): Promise<string> {
         try {
-            const content = typeof message.content === "string" 
-                ? message.content 
-                : message.content?.text;
+            const content =
+                typeof message.content === "string"
+                    ? message.content
+                    : message.content?.text;
 
             if (!content) {
                 throw new Error("No message content provided");
@@ -33,28 +36,30 @@ export class BoardroomProvider implements Provider {
             }
 
             console.log(`Fetching proposals for protocol: ${protocolId}`);
-            
+
             const proposals = await this.client.fetchProposals(protocolId);
             return this.formatProposalsData(proposals);
-
         } catch (error) {
             console.error("BoardroomProvider error:", error);
-            const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+            const errorMessage =
+                error instanceof Error
+                    ? error.message
+                    : "Unknown error occurred";
             return `Error: ${errorMessage}`;
         }
     }
 
     private extractProtocolId(content: string): string | null {
-        const protocols = ['aave', 'uniswap', 'compound', 'maker'];
+        const protocols = ["aave", "uniswap", "compound", "maker"];
         const words = content.toLowerCase().split(/[\s,.!?]+/);
-        
+
         for (const word of words) {
-            const base = word.replace(/\.eth$/, '').trim();
+            const base = word.replace(/\.eth$/, "").trim();
             if (protocols.includes(base)) {
                 return base;
             }
         }
-        
+
         return null;
     }
 
@@ -64,8 +69,11 @@ export class BoardroomProvider implements Provider {
         }
 
         return `Found ${proposals.length} proposals:\n${proposals
-            .map((p, i) => `${i + 1}. ${p.title || 'Untitled'} (Status: ${p.status || 'Unknown'})`)
-            .join('\n')}`;
+            .map(
+                (p, i) =>
+                    `${i + 1}. ${p.title || "Untitled"} (Status: ${p.status || "Unknown"})`,
+            )
+            .join("\n")}`;
     }
 }
 
