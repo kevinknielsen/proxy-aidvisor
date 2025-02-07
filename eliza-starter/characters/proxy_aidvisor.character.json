@@ -4,7 +4,7 @@
     "modelProvider": "anthropic",
     "settings": {
         "secrets": {
-            "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
+            "ANTHROPIC_API_KEY": "Bearer ${ANTHROPIC_API_KEY}"
         },
         "model": "claude-3-sonnet-20240229",
         "modelConfig": {
