@@ -44,18 +44,13 @@ export class BoardroomProvider implements Provider {
     }
 
     private extractProtocolId(content: string): string | null {
-        // First try to match explicit protocol format with optional .eth
-        let match = content.match(/protocol[:\s]+([a-zA-Z0-9-.]+)(\.eth)?/i);
-        if (match) return match[1].toLowerCase();
-        
-        // Then try to find protocol name with optional .eth
         const protocols = ['aave', 'uniswap', 'compound', 'maker'];
         const words = content.toLowerCase().split(/[\s,.!?]+/);
         
         for (const word of words) {
-            const base = word.replace(/\.eth$/, '');
+            const base = word.replace(/\.eth$/, '').trim();
             if (protocols.includes(base)) {
-                return word; // Return full word including .eth if present
+                return base;
             }
         }
         
