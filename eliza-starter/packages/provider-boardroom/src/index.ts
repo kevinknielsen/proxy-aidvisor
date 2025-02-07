@@ -4,12 +4,13 @@ import { BoardroomClient } from './boardroomClient';
 export class BoardroomProvider implements Provider {
     private client: BoardroomClient;
 
-    constructor(apiKey: string) {
-        if (!apiKey) {
-            throw new Error('Boardroom API key is required');
+    constructor(apiKey?: string) {
+        const boardroomKey = apiKey || process.env.BOARDROOM_API_KEY;
+        if (!boardroomKey) {
+            throw new Error('Boardroom API key is required - set BOARDROOM_API_KEY in secrets');
         }
-        console.log('Initializing BoardroomClient with API key');
-        this.client = new BoardroomClient(apiKey);
+        console.log('Initializing BoardroomClient');
+        this.client = new BoardroomClient(boardroomKey);
     }
 
     async get(
