@@ -16,21 +16,28 @@ export class BoardroomClient {
      */
     async fetchProposals(protocolId: string): Promise<any> {
         try {
-            const cleanProtocolId = protocolId.replace('.eth', '');
+            const cleanProtocolId = protocolId.toLowerCase().replace('.eth', '');
             console.log(`Fetching proposals for ${cleanProtocolId} from Boardroom API`);
             const response = await axios.get(`${API_BASE_URL}/protocols/${cleanProtocolId}/proposals`, {
                 headers: { 
                     'Authorization': `Bearer ${this.apiKey}`,
-                    'Accept': 'application/json'
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                params: {
+                    limit: 10,
+                    orderBy: 'created',
+                    orderDirection: 'desc'
                 }
             });
             
-            if (!response.data) {
-                throw new Error('No data received from Boardroom API');
+            if (!response.data || !response.data.data) {
+                console.log('API Response:', response);
+                throw new Error('Invalid response format from Boardroom API');
             }
             
-            console.log(`Received response from Boardroom API for ${cleanProtocolId}`);
-            return response.data;
+            console.log(`Retrieved ${response.data.data.length} proposals for ${cleanProtocolId}`);
+            return response.data.data;
         } catch (error: any) {
             console.error('Error fetching proposals:', error.response?.data || error.message);
             throw error;
