@@ -41,16 +41,14 @@ export class BoardroomProvider implements Provider {
 
     private extractProtocolId(content: string): string | null {
         // First try to match explicit protocol format
-        let match = content.match(/protocol[:\s]+([a-zA-Z0-9-.]+)/i);
+        let match = content.match(/protocol[:\s]+([a-zA-Z0-9-]+)/i);
         if (match) return match[1].toLowerCase();
         
-        // Then try to match protocol names with optional .eth
-        const protocolMatch = content.match(/([a-zA-Z0-9]+)(\.eth)?/i);
-        if (protocolMatch && ['aave', 'uniswap', 'compound', 'maker'].includes(protocolMatch[1].toLowerCase())) {
-            return protocolMatch[0].toLowerCase();
-        }
-        
-        return null;
+        // Then try to match common protocol names directly
+        const protocols = ['aave', 'uniswap', 'compound', 'maker'];
+        const words = content.toLowerCase().split(/[\s,.!?]+/);
+        const found = words.find(word => protocols.includes(word));
+        return found || null;
     }
 
     private formatProposalsData(proposals: any[]): string {
