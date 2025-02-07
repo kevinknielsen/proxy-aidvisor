@@ -5,6 +5,10 @@ export class BoardroomProvider implements Provider {
     private client: BoardroomClient;
 
     constructor(apiKey: string) {
+        if (!apiKey) {
+            throw new Error('Boardroom API key is required');
+        }
+        console.log('Initializing BoardroomClient with API key');
         this.client = new BoardroomClient(apiKey);
     }
 

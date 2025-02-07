@@ -16,9 +16,11 @@ export class BoardroomClient {
      */
     async fetchProposals(protocolId: string): Promise<any> {
         try {
+            console.log(`Fetching proposals for ${protocolId} from Boardroom API`);
             const response = await axios.get(`${API_BASE_URL}/protocols/${protocolId}/proposals`, {
                 headers: { Authorization: `Bearer ${this.apiKey}` },
             });
+            console.log(`Received response from Boardroom API:`, response.data);
             return response.data;
         } catch (error: any) {
             console.error('Error fetching proposals:', error.response?.data || error.message);
